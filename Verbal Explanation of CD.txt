@@ -1,13 +1,30 @@
-Title & key phrase & logo
-• Logo: preferrably no shades, simple symbol
- Overall look & feel
-• Describe targeted CD in one sentence
+Corporate design elaboration:
 
-Logo field
+Our title is gym management system. It demonstrates to the users that the system the they just open is for gym management. 
 
-Meta bar
-  Colors: primary / secondary / background
-• Define as RGB values, PANTONE, RAL, ...; HTML!
-• Image formats: JPEG, GIF, PNG Fonts & typesetting
-• serif or sans-serif; max 2!
- Window subdivision
+Our key phrase is “stay buff”, which is very simple and it conveys the important meaning behind at the same time. 
+
+Our logo is the word GMS, which is the abbreviation for gym management system. The flexed muscles in the logo also convey the similar message about exercising and training.
+
+Overall look and feel:
+
+It is a simple management system for all the workers and costumers of a gym.
+
+
+Colors:
+
+Black and white shows strength and perseverance. It goes well with our theme of “being buff”. They are also simple colors, making the users feel simple and comfortable at the same time.
+
+Primary color is white. Second color is black.	 Background is white.
+
+
+Fonts and typesetting:
+
+The font that we used is sans-serif. It is clear and beautiful.
+
+
+Window subdivision:
+
+The navigation bar and the content will be scaled accordingly in different platforms while ensuring the readability of the page.
+
+All the previous design work aim to demonstrate the corporate image in a simple and clear way.
