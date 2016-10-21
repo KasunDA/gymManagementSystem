@@ -1,0 +1,13 @@
+Title & key phrase & logo
+• Logo: preferrably no shades, simple symbol
+ Overall look & feel
+• Describe targeted CD in one sentence
+
+Logo field
+
+Meta bar
+  Colors: primary / secondary / background
+• Define as RGB values, PANTONE, RAL, ...; HTML!
+• Image formats: JPEG, GIF, PNG Fonts & typesetting
+• serif or sans-serif; max 2!
+ Window subdivision
