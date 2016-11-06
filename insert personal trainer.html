@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>Add New Record in MySQL Database</title>
+    </head>
+    <body>
+        <?php
+        if(isset($_POST['add']))
+        {
+        $dbhost = 'localhost';
+        $dbuser = 'root';
+        $dbpass = '09tc42';
+        $dbname = 'gymManagementProject';
+        $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+
+        if(! $conn ){
+        die('Could not connect: ' . mysql_error());
+        }
+
+        if(! get_magic_quotes_gpc() ) {
+        $customer_id = addslashes ($_POST['customer_id']);
+        $first_name = addslashes ($_POST['first_name']);
+        $last_name = addslashes ($_POST['last_name']);
+        $email = addslashes ($_POST['email']);
+        } else {
+        $customer_id = $_POST['customer_id'];
+        $first_name = $_POST['first_name'];
+        $last_name = $_POST['last_name'];
+        $email = $_POST['email'];
+        }
+
+        $submission_date = $_POST['submission_date'];
+
+        $sql = "INSERT INTO tempCustomer ".
+        "(wId, ptFirstName, ptLastName, ptEmail) ".
+        "VALUES ".
+        "('$customer_id','$first_name','$last_name', '$email')";
+
+        mysql_select_db('gymManagementProject');
+
+        $retval = mysql_query( $sql, $conn );
+        if(! $retval ) {
+        die('Could not enter data: ' . mysql_error());
+        }
+        echo "Entered data successfully\n";
+        mysql_close($conn);
+        }
+        else
+        {
+        ?>
+        <form method="post" action="<?php $_PHP_SELF ?>">
+            <table width="600" border="0" cellspacing="1" cellpadding="2">
+                <tr>
+                    <td width="250">worker ID</td>
+                    <td>
+                        <input name="customer_id" type="text" id="customer_id">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="250">First Name</td>
+                    <td>
+                        <input name="first_name" type="text" id="first_name">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="250">Last Name</td>
+                    <td>
+                        <input name="submission_date" type="text" id="last_name">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="250">Email</td>
+                    <td>
+                        <input name="submission_date" type="text" id="email">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="250"> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td width="250"> </td>
+                    <td>
+                        <button onclick="myFunction()">insert</button>
+                        <script>
+                            function myFunction() {
+                                alert("Worker is refered!");
+                                alert("Personal trainer is refered!");
+                            }
+                        </script>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <?php
+        }
+        ?>
+    </body>
+</html>
