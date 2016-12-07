@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+Search Page
+-->
+<html>
+    <head>
+        <title>Search</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+        <!--NAVIGATION BAR-->
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+
+                    <img class="thumb" src="/img/logo.png" width="100" height="33"/>
+                    <!--<a class="brand" href="#">Gym Management System</a>-->
+                    <div class="btn-group pull-right">
+                        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="icon-user"></i> Username
+                            <span class="caret"></span>
+                        </a>
+                    </div>
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            <li class=""><a href="/index.html">Home</a></li>
+                            <li><a href="/insert/insertPage.html">Insert</a></li>
+                            <li><a href="/searches/searchPage.html">Search</a></li>
+                            <!--<li><a href="book.html">Book</a></li>-->
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div id="welcome" class="hero-unit">
+            <h1>Welcome to search page!</h1>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>Search query 1 - get full names of temporary customers from last name</h3>
+                    <form name='form' method='post' action="searchQuery1.php">
+                        Last Name: <input type="text" name="lastName" id="LastName" ><br/>
+                        <input type="submit" name="submit" value="get full names">
+                    </form>
+                </div>
+
+                <div class="col-sm-6">
+                    <h3>Search query 2 - get emails of temporary customers from their times left</h3>
+                    <form name='form' method='post' action="searchQuery2.php">
+                        Time left(int): <input type="text" name="times" id="times" ><br/>
+                        <input type="submit" name="submit" value="get emails">
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>Search query 3 - get the full name of the temporary customer with the most time left</h3>
+                    <form name='form' method='post' action="searchQuery3.php">
+                        <input type="submit" name="submit" value="get full name">
+                    </form>
+                </div>
+
+
+
+                <div class="col-sm-6">
+                    <h3>Search query 4 - get emails of permanent customers from their card type</h3>
+                    <form name='form' method='post' action="searchQuery4.php">
+                        Card type: <select id="type" name="type">                      
+                            <option value="year">Year card</option>
+                            <option value="month">Month card</option>
+                        </select>
+                        <input type="submit" name="submit" value="get emails">
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>Search query 5</h3>
+                    <h4>Get card type of cardholder by permanent customer whose card group has at least two people <br/> And the cardholder should not be the first to join the gym(id > 001)</h4>
+                    <form name='form' method='post' action="searchQuery5.php">
+                        <input type="submit" name="submit" value="get card type">
+                    </form>
+                </div>
+
+                <div class="col-sm-6">
+                    <h3>Search query 6 - get the first name of the personal trainer by their availability</h3>
+                    <form name='form' method='post' action="searchQuery6.php">
+                        Availability: <select id="availability" name="availability">                      
+                            <option value="1">available</option>
+                            <option value="0">busy</option>
+                        </select>
+                        <input type="submit" name="submit" value="get emails">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
